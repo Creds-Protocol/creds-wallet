@@ -1,0 +1,159 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "IEncryptionOracle",
+  "sourceName": "contracts/CredsAccessControl.sol",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "distributedKey",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "x",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "y",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct G1Point",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_cipherId",
+          "type": "uint256"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "x",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "y",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct G1Point",
+          "name": "_publickey",
+          "type": "tuple"
+        }
+      ],
+      "name": "requestReencryption",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "x",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "y",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct G1Point",
+              "name": "random",
+              "type": "tuple"
+            },
+            {
+              "internalType": "uint256",
+              "name": "cipher",
+              "type": "uint256"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "x",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "y",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct G1Point",
+              "name": "random2",
+              "type": "tuple"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "f",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "e",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct DleqProof",
+              "name": "dleq",
+              "type": "tuple"
+            }
+          ],
+          "internalType": "struct Ciphertext",
+          "name": "_cipher",
+          "type": "tuple"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_link",
+          "type": "bytes"
+        },
+        {
+          "internalType": "address",
+          "name": "_encryptor",
+          "type": "address"
+        }
+      ],
+      "name": "submitCiphertext",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
